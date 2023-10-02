@@ -1,0 +1,259 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="dist/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <title>Home</title>
+  <style>
+    .absolute button {
+    transition: transform 0.5s ease-in-out;
+}
+.gambar {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+
+  </style>
+</head>
+<body>
+  <nav class="navbar p-8 bg-stone-700">
+    <div class="container mx-auto">
+      <div class="flex items-center justify-between">
+        <a class="text-white text-2xl font-bold" href="#">
+          <img src="logo.png" alt="logo" class="h-14 w-14">
+        </a>
+        <div class="space-x-4">
+          <a class="text-white font-bold hover:bg-slate-600 rounded-md" href="index.html">Home</a>
+          <a class="text-white font-bold hover:bg-slate-600 rounded-md" href="index3.html">Games</a>
+          <a class="text-white font-bold hover:bg-slate-600 rounded-md" href="#about">About</a>
+          <a class="text-white font-bold hover:bg-slate-600 rounded-md" href="#">Follow us</a>
+          <a class="text-white font-bold hover:bg-slate-600 rounded-md" href="#">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav> 
+
+  <div class="flex justify-center p-7">
+    <img src="Group 11274.jpg" alt="Foto 1" class="w-90 p-7 mx-auto">
+    <img src="back1.jpg" alt="back" class="mx-auto">
+  </div>
+
+  <div class="absolute p-7 justify-items-end" style="right: 0; bottom: 0;">
+    <button class="rounded-lg">
+        <img src="gm1.png" alt="gm1" class="w-80 h-50">
+    </button>
+    <button class="mb-2 rounded-lg">
+        <img src="gm2.jpg" alt="gm2" class="w-50 h-50">
+    </button>
+    <button class="mb-2 rounded-lg">
+        <img src="gm3.jpg" alt="gm3" class="w-50 h-50">
+    </button>
+    <button class="mb-2 rounded-lg">
+        <img src="gm4.jpg" alt="gm4" class="w-50 h-50">
+    </button>
+</div>
+
+<button id="hoverButton" class="mb-2 flex absolute" style="margin-top: 100px; margin-left: 300px;">
+    <img src="Group 11268.png" class="w-50 h-50 p-10">
+    <img src="Group 11267.png" alt="Icon" class="w-50 h-50 p-10">
+</button>
+
+<script>
+    const hoverButton = document.getElementById("hoverButton");
+    const tombolGambar = document.querySelectorAll(".absolute button");
+    let currentIndex = 0;
+    let isAnimating = false;
+
+    hoverButton.addEventListener("click", function() {
+        if (!isAnimating) {
+            isAnimating = true;
+
+            tombolGambar.forEach(function(button) {
+                button.classList.remove("hover:bg-sky-400");
+            });
+
+            tombolGambar[currentIndex].style.transform = "translateY(-100%)";
+
+            setTimeout(function() {
+                tombolGambar[currentIndex].style.transform = "translateY(0)";
+                currentIndex = (currentIndex + 1) % tombolGambar.length;
+                tombolGambar[currentIndex].style.transform = "translateY(-100%)";
+                tombolGambar[currentIndex].classList.add("hover:bg-sky-400");
+            }, 500);
+
+            setTimeout(function() {
+                tombolGambar[currentIndex].style.transform = "translateY(0)";
+                isAnimating = false;
+            }, 1000);
+        }
+    });
+</script>
+
+
+
+<div class="relative p-5" style=" position: absolute; top: 115%; left: 50%; transform: translate(-50%, -50%); ">
+    <img src="forgame.png" alt="tpln" class="w-50 h-50">
+  </div>
+    <h1 class="font-bold text-2xl text-white"  style=" position: absolute; top: 113%; left: 40%;">PROMOTION VIDEO-HOW TO DIE</h1>
+
+        <div style="display: flex;flex-direction: column;align-items: center;justify-content: center;text-align: center;margin-top: 30%;">
+            <button class="bottom-0 left-0 right-0 flex items-center mb-2">
+                <img src="Group 11231.png" alt="vidio">
+            </button>
+            </div>
+          
+            <div class="relative">
+              <div class="absolute">
+                <img src="Rectangle 2940.jpg" alt="back" style="height: 3600px; width: 1920px;">
+              </div>
+
+              <div style="position: relative; flex-direction: column;;height: 100vh;text-align: center;top: 50px;">
+                  <img src="Mask group.png" alt="latar" class="ml-40">
+                </div>  
+
+                    <div class="relative" style="flex-direction: column; height: 100vh; top: 10px;">
+                      <img src="forgame.png" alt="game" class="relative block" style=" margin: 50px auto;max-width: 80%;padding-top: 2px;bottom: 850px;">
+                      <h1 class="font-bold text-white text-2xl flex absolute" style="margin-left: 46%; bottom: 184%;">GAME FOR YOU</h1>
+                    </div>
+
+                    <div class="absolute pt-1 m-12 block" style="max-width: 80%; margin-left: 28%; bottom: 67%;">
+                      <button>
+                        <img src="games1.png" alt="gm1" class="hover:bg-sky-400 rounded-xl gambar">
+                      </button>
+                      <button>
+                        <img src="games2.png" alt="gm2" class="hover:bg-sky-400 rounded-xl ml-2 gambar">
+                      </button>
+                    </div>
+                    <div class="absolute pt-1 m-12 block" style="max-width: 80%; margin-left: 28%; bottom: 50%;">
+                      <button>
+                        <img src="games3.png" alt="gm3" class="hover:bg-sky-400 rounded-xl gambar">
+                      </button>
+                      <button>
+                        <img src="games4.png" alt="gm4" class="hover:bg-sky-400 rounded-xl ml-2 gambar">
+                      </button>
+                    </div>
+                  </div>
+
+                  <script>
+                    
+const gambarElems = document.querySelectorAll(".gambar");
+function handleImageClick(event) {
+    
+    event.target.style.transform = "scale(1.2)";
+    setTimeout(() => {
+        event.target.style.transform = "none";
+    }, 300);
+}
+gambarElems.forEach((gambarElem) => {
+    gambarElem.addEventListener("click", handleImageClick);
+});
+ </script>
+
+                  <div id="about" class="relative flex items-center ml-52" style="bottom: 70px;">
+                    <img src="teks.png" alt="teks" class="mt-10 absolute text-center justify-center items-center" style="flex-direction: column; bottom: 100px;">
+                    <h1 class="font-bold text-2xl text-center absolute ml-56" style="bottom: 350px;"> ABOUT US <br>
+                        Shireishi Production is a game studio based in the vibrant city of Malang, Indonesia. Our <br>
+                        unwavering commitment to research and development fuels our passion for creating exceptional<br>
+                        games that rival the very best in the world. With a razor-sharp focus on producing top-notch<br>
+                        graphical quality, we strive to set new standards of excellence in the gaming industry
+                    </h1>
+                </div>
+                
+
+                  <div class=" relative flex ml-52">
+                    <img src="forgame.png" alt="game" class=" ml-56 mt-10 absolute">
+                    <h1 class="font-bold text-white text-2xl absolute mt-20" style="margin-left: 40%;" >NEWS</h1>
+                  </div>
+
+                  <div>
+                    <button  class="absolute bg-stone-700 text-white rounded-md py-3 px-4" style="margin-left: 9%; margin-top: 250px;">
+                      All
+                    </button>
+                  </div>
+                  
+
+                  <div>
+                    <button class="absolute bg-white text-gray-400 rounded-md py-3 px-4" style="margin-left: 13%; margin-top: 250px;">
+                     #Exhibition
+                    </button>
+                  </div>
+                  
+
+                  <div>
+                    <button  class="absolute bg-white text-gray-400 rounded-md py-3 px-4" style="margin-left: 20%; margin-top: 250px;">
+                    #Event
+                    </button>
+                  </div>
+                  
+                  <div>
+                    <button class="absolute bg-white text-gray-400 rounded-md py-3 px-4" style="margin-left: 25%; margin-top: 250px;">
+                      Development
+                    </button>
+                  </div>
+                  
+          
+                    <div>
+                      <button id="tombol1" class="absolute bg-stone-700 text-white rounded-full py-3 px-4" style="margin-left: 86%; margin-top: 250px;">
+                        See All Blog
+                      </button>
+                    </div>
+                    
+                    <script>
+                      const tombol1 = document.getElementById("tombol1");
+                      tombol1.addEventListener("click", function () {
+                        window.location.href = "index4.html";
+                      });
+                    </script>
+
+<div style="display: flex;height: 50%;  margin-top: 350px;width: 20%;height: 20%;padding: 20%;border-radius: 20px;left: 150px; " class=" absolute bg-white">
+  <img src="home-campuslife-700x450 2.png" alt="imgart" class="absolute flex justify-center" style=" right: 100px; bottom: 45%;">
+ <h1 class=" font-bold text-2xl mt-12 absolute" style="right: 450px;">Kegiatan tempat A</h1>
+ <span class="material-symbols-outlined absolute mt-24" style="right: 640px;">person</span>
+ <h2 class="absolute text-black whitespace-nowrap mt-24 " style="right: 440px;">Johan |  Senin, 12 Juni 2023</h2>
+ <p class="absolute text-black ml-16 text-justify text-lg" style="top: 69%; right: 30%;left: 5%;;">Lorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum has been the industry's standard dummy
+  text ever since the 1500s, when an unknown printer took a galley
+  of type and scrambled it to make a type specimen book. It has
+  survived not only five centuries, but also the leap into elec....</p>
+  <a href="index1.html" class="absolute  font-bold text-amber-600" style="top: 95%; right: 76%;">Show More</a>
+
+</div>
+
+<div style="display: flex;height: 50%;  margin-top: 350px;width: 20%;height: 20%;padding: 20%;border-radius: 20px;left: 1000px; " class=" absolute bg-white">
+  <img src="home-campuslife-700x450 2.png" alt="imgart" class="absolute flex justify-center" style=" right: 100px; bottom: 45%;">
+ <h1 class=" font-bold text-2xl mt-12 absolute" style="right: 450px;">Kegiatan tempat A</h1>
+ <span class="material-symbols-outlined absolute mt-24" style="right: 640px;">person</span>
+ <h2 class="absolute text-black whitespace-nowrap mt-24 " style="right: 440px;">Johan |  Senin, 12 Juni 2023</h2>
+ <p class="absolute text-black ml-16 text-justify text-lg" style="top: 68%; right: 30%;left: 5%;;">Lorem Ipsum is simply dummy text of the printing and typesetting industryLorem Ipsum has been the industry's standard dummy
+  text ever since the 1500s, when an unknown printer took a galley
+  of type and scrambled it to make a type specimen book. It has
+  survived not only five centuries, but also the leap into elec....</p>
+  <a href="index1.html" class="absolute font-bold text-amber-600 " style="top: 95%; right: 76%;">Show More</a>
+</div>
+
+<button class="items-center flex relative justify-center ml-96" style="top: 600px ; left: 50px;">
+  <div class="relative flex items-center justify-center ml-96" style="top: 600px; left: 50px;">
+    <img src="loading2.png" alt="lod1" class="ml-3">
+    <img src="loading.png" alt="lod2">
+    <img src="loading.png" alt="lod3">
+  </div>
+</button>
+
+<div class="flex relative bg-gray-300" style="top: 1500px;height: 12%;padding: 10px;">
+  <h1 class=" font-bold text-2xl text-center items-center justify-center absolute " style="top: 30%; left: 39%;"> For Any Inquiry, Pleace Contact Us On</h1>
+  <h1 class=" relative  text-center mt-16" style="left: 840px;">www.pundiberjayamas.com</h1>
+</div>
+
+
+<div class=" flex relative bg-stone-700" style="top:1500px;height: 12%;padding: 3px;">
+  <img src="logo.png" alt=" logo" class="h-20 w-20 mt-6" style="left:100%;">
+  <h1 class="font-bold text-lg mt-10 text-white" style="margin-left: 60%;">FOLLOW US :</h1>
+  <button class="w-7 h-7 rounded bg-white mt-10 ml-4"></button>
+  <button class="w-7 h-7 rounded bg-white mt-10 ml-7"></button>
+  <button class="w-7 h-7 rounded bg-white mt-10 ml-7"></button>
+</div>
+
+</body>
+</html>
